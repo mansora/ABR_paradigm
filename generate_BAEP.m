@@ -13,9 +13,11 @@ function [BAEP_signal, trigger_signal]=generate_BAEP(click_rate,  click_duration
     %%%% Written by Mansoureh Fahimi Hnazaee (University College London)
     %%%%
 
-
     if nargin<1
-        click_rate=11.1;
+       click_rate=11.1; 
+    end
+    
+    if nargin<2
         click_duration=0.0001;
         sweeps=2000;
         intensity_db=1;

@@ -16,13 +16,15 @@ function [FFR_signal, trigger_signal]=generate_FFR(freq_modulate, intensity_db, 
     %%%% Written by Mansoureh Fahimi Hnazaee (University College London)
     %%%%
 
+    % 1500 sweeps total takes about 8 minutes for a modulation frequency of
+    % 333Hz
     if nargin<3
         intensity_db=      1;
         trial_duration=    0.2;
         rise_fall_time=    0.05;   %0.05
         SOA_time_mean=     0.253;
         samplingFrequency= 44100;
-        n_trials=          950;  %475 in each polarity
+        n_trials=          1500;  %950 in each polarity
     end
 
     % r = a + (b-a).*rand(N,1)

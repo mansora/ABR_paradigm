@@ -62,7 +62,7 @@ function t2=run_BAEP_Psychtoolbox(click_rate)
 
         tic
         disp('Starting Audio...')
-        disp(['Brainstem Auditory Evoked Response Task. Click rate=', num2str(clickrate)])
+        disp(['Brainstem Auditory Evoked Response Task. Click rate=', num2str(click_rate)])
         % Start audio playback #1
         PsychPortAudio('Start', audioSlave, repetitions, startCue, waitForDeviceStart);
     

@@ -16,10 +16,12 @@ function [BAEP_signal, trigger_signal]=generate_BAEP(click_rate,  click_duration
     if nargin<1
        click_rate=11.1; 
     end
-    
+
+    % around 1.5 minutes per 1000 sweeps with a click rate of 11.1
+    % around 24 minutes per 1000 sweeps with a click rate of 0.7
     if nargin<2
         click_duration=0.0001;
-        sweeps=2000;
+        sweeps=4000;
         intensity_db=1;
         samplingFrequency=44100; % This sampling rate means our click duration will not be exaclty 100us, but that is not a big problem
         polarity='alternate'; 
